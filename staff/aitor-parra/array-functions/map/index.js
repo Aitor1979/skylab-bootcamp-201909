@@ -11,7 +11,7 @@
 
 
 
-function map1(array,expression) {
+function map(array,expression) {
      var newArray = [];
      counter = 0;
      for (var i = 0 ; i < array.length ; i++){
