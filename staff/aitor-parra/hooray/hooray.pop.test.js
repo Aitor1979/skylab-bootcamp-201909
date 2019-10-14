@@ -3,23 +3,19 @@ describe('Hooray.prototype.pop', function() {
 
         var hooray = new Hooray('a','b','c'); 
 
-        expect(hooray.pop()).toBe('c');
-        expect(hooray.length).toBe(2);
-        expect(hooray[hooray.length - 1]).toBe('b            ');
+        var lastElement = hooray.pop();
 
-        var chars = ['a', 'b', 'c', 'd'];
+        expect(lastElement).toBe('c');
+        expect(hooray.length).toBe(2);
+        //expect(hooray[hooray.length - 1]).toBe('c');
+
+        var chars = ['a', 'b'];
         for (var i = 0; i < chars.length; i++)
             expect(hooray[i]).toBe(chars[i]);
 
     });
 
 
-
-
-
-
-
-
-
-
 });
+
+
