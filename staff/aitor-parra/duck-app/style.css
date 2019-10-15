@@ -1,0 +1,37 @@
+* {
+    border: 1px solid black;
+    
+}
+
+.body-grid {
+    display: grid;
+    gap: .2rem;
+    grid-template-columns: 684px;
+    grid-template-rows: 5% 30% 50%;
+    grid-template-areas: 
+    "header"  
+    "main" 
+    "footer";
+}
+
+.duck-header {
+    grid-area: header;
+}
+
+.duck-main {
+    grid-area: main;
+}
+
+.duck-footer {
+    grid-area: footer;
+}
+
+.figure__image {
+    /* border: 1px solid black; */
+    width: 10vw;
+    height: 10vw;
+}
+.duck-header {
+    display: flexbox;
+    align-items: center;
+}
