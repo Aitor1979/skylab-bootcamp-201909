@@ -1,15 +1,26 @@
 describe('map', function(){
-    it('it should returns a new array with the result of calling a function  on every element in the calling array')
+
+    it('it should returns a new array with the result of calling a function on every element in the calling array', function(){
+
         var array = [1, 9, 17, 33, 39];
+        var result = [];
+        function callback(arr) {
 
-        var sum = function()
+            
 
-        var newArray = 
+
+        }
+
+    
+    
+
+       
 
         
         expect(array.length).toBe(5)
         expect()
 
+    })
 
 });
 
