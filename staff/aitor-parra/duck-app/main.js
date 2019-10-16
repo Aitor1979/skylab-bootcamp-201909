@@ -1,6 +1,6 @@
-var searchButton = document.getElementsByClassName('duck-header__form')[0];
-var duckMainSection = document.getElementsByClassName('duck-main__section')[0];
-var duckMainArticle = document.getElementsByClassName('duck-main__article')[0];
+var searchButton = document.getElementsByClassName('duck-section__form form')[0];
+var duckMainSection = document.getElementsByClassName('duck-section-multi')[0];
+var duckMainArticle = document.getElementsByClassName('duck-section-single')[0];
 var ul = document.createElement('ul');
 
 searchButton.addEventListener('submit', searchButtonPush)
@@ -10,7 +10,7 @@ function searchButtonPush(e) {
     e.preventDefault()
     ul.innerText = " ";
     var query = e.target.inputname.value;
-    var xhr = new XMLHttpRequest; //objecto que generamos para llamar al ajax
+    var xhr = new XMLHttpRequest; //objecto que generamos para llamar al ajax/creamos la peticion
     xhr.open('GET', 'https://duckling-api.herokuapp.com/api/search?q=' + query); //hacemos una llamada (con un query= green)
     xhr.onreadystatechange = function () { //lo que llegue, la respuesta, le passamos una funcion que trabaja esa respuesta
         if (this.readyState == 4 && this.status == 201) {
