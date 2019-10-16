@@ -30,14 +30,14 @@ function printDucks(ducks) {
     ducks.forEach(function (duck) {
         var li = document.createElement('li');
         var image = document.createElement('img');
-        var title = document.createElement('h2');
-        var price = document.createElement('h4');
+        var title = document.createElement('h4');
+        var price = document.createElement('span');
         image.src = duck.imageUrl;
         title = duck.title;
         price = duck.price;
         ul.append(li);
 
-        li.append(title, image, price);
+        li.append(image, " ", title, " , price: ", price);
 
         li.addEventListener('click', function () {
             searchDuck(duck.id)
@@ -65,14 +65,14 @@ function printDuck(duck) {
 
     var image = document.createElement('img');
     var title = document.createElement('h2');
-    var price = document.createElement('h4');
+    var price = document.createElement('span');
     var description = document.createElement('h4');
     image.src = duck.imageUrl;
     title = duck.title;
     price = duck.price;
     description = duck.description;
     
-    duckMainArticle.append(title, image, price, description)
+    duckMainArticle.append(image, " ", title, " , price: ", price, " ", description)
 }
 
 
