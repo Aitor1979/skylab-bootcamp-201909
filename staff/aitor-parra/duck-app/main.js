@@ -2,6 +2,7 @@ var searchButton = document.getElementsByClassName('duck-section__form form')[0]
 var duckMainSection = document.getElementsByClassName('duck-section-multi')[0];
 var duckMainArticle = document.getElementsByClassName('duck-section-single')[0];
 var ul = document.createElement('ul');
+ul.classList.add('ul-ducks')
 
 searchButton.addEventListener('submit', searchButtonPush)
 
@@ -32,6 +33,13 @@ function printDucks(ducks) {
         var image = document.createElement('img');
         var title = document.createElement('h4');
         var price = document.createElement('span');
+        li.classList.add('li__item');
+        image.classList.add('li__img');
+        title.classList.add('li__h4');
+        price.classList.add('li__span');
+
+
+
         image.src = duck.imageUrl;
         title = duck.title;
         price = duck.price;
@@ -67,12 +75,25 @@ function printDuck(duck) {
     var title = document.createElement('h2');
     var price = document.createElement('span');
     var description = document.createElement('h4');
+
+    /* li.classList.add('li__item'); */
+    image.classList.add('li__img');
+    title.classList.add('li__h2');
+    price.classList.add('li__span');
+    description.classList.add('h4');
+
     image.src = duck.imageUrl;
     title = duck.title;
     price = duck.price;
     description = duck.description;
     
     duckMainArticle.append(image, " ", title, " , price: ", price, " ", description)
+
+
+    /* var views = document.getElementsByClassName('view');
+
+        views[0].classList.add('hide');
+        views[1].classList.remove('hide'); */
 }
 
 
