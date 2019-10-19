@@ -40,9 +40,8 @@ function listInitialRandomDucks() {
 }
   
 function listSearchResults(query) {
-    searchDucks(query, function (ducks) {
-            paintResults(ducks);
-    });
+    searchDucks(query, paintResults);
+    
 }
 
 function searchDucks(query, callback) {
@@ -74,14 +73,48 @@ function paintResults(ducks) {
         item.addEventListener('click', function (event) {
             var id = duck.id;
 
-            var xhr = new XMLHttpRequest;
+            retrieveDuck(id, paintDetail);
+        });
+        result.append(item);
 
-            xhr.open('GET', 'https://duckling-api.herokuapp.com/api/ducks/' + id);
+        var title = document.createElement('h2');
+        title.classList.add('item__title');
+        title.innerText = duck.title;
 
-            xhr.onreadystatechange = function () {
-                if (this.readyState == 4 && this.status == 201) {
-                    var duck = JSON.parse(xhr.responseText);
+        var image = document.createElement('img');
+        image.classList.add('item__image');
+        image.src = duck.imageUrl;
 
+        var price = document.createElement('span');
+        price.classList.add('item__price');
+        price.innerText = duck.price;
+
+        item.append(title, image, price);
+
+        results.append(result);
+    });
+}
+
+function retrieveDuck(id, callback) {
+    var xhr = new XMLHttpRequest;
+
+        xhr.open('GET', 'https://duckling-api.herokuapp.com/api/ducks/' + id);
+
+        xhr.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 201) {
+                var duck = JSON.parse(xhr.responseText);
+
+                callback(duck);
+
+    }
+
+};
+
+xhr.send();
+}
+
+            
+function painteDetail(duck) {
                     var detail = document.getElementsByClassName('detail')[0];
 
                     var title = detail.getElementsByClassName('detail__title')[0];
@@ -112,26 +145,3 @@ function paintResults(ducks) {
                     views[0].classList.add('hide');
                     views[1].classList.remove('hide');
                 }
-            };
-
-            xhr.send();
-        });
-        result.append(item);
-
-        var title = document.createElement('h2');
-        title.classList.add('item__title');
-        title.innerText = duck.title;
-
-        var image = document.createElement('img');
-        image.classList.add('item__image');
-        image.src = duck.imageUrl;
-
-        var price = document.createElement('span');
-        price.classList.add('item__price');
-        price.innerText = duck.price;
-
-        item.append(title, image, price);
-
-        results.append(result);
-    });
-}
