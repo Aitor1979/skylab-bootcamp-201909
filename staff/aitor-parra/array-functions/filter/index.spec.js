@@ -4,8 +4,6 @@ describe ('filter', function (){
         var array = [1, 2, 3, 4, 5];
         var expression = function(currentValue) { return currentValue >= 3;}
         var result = filter(array, expression);
-
-        /* function expression (number) {return number >= 3;} */;
         
         var expected = [3, 4, 5];
         expect(expected).toEqual(result);

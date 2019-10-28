@@ -2,14 +2,16 @@ describe('map', function(){
 
     it('it should returns a new array with the result of calling a function on every element in the calling array', function(){
 
-        var array = [1, 9, 17, 33, 39];
-        var result = [];
-        function callback(arr) {
+        var array = [1, 2, 3, 4, 5];
+        var expression = function(currentValue) { return currentValue * 2}
+        var result = map(array, expression);
 
-            
+        var expected = [2, 4, 6, 8, 10]
+
+        expect(expected).toBe(result)
 
 
-        }
+        
 
     
     
@@ -18,7 +20,7 @@ describe('map', function(){
 
         
         expect(array.length).toBe(5)
-        expect()
+        /* expect() */
 
     })
 

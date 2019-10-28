@@ -11,7 +11,7 @@
 
 
 
-function map(array,expression) {
+function map1(array,expression) {
      var newArray = [];
      counter = 0;
      for (var i = 0 ; i < array.length ; i++){
@@ -24,3 +24,11 @@ function map(array,expression) {
 /* function condition1(element) {
     return element * 2;
 } */
+
+var array1 = [1, 4, 9, 16];
+
+// pass a function to map
+const map1 = array1.map(x => x * 2);
+
+console.log(map1);
+// expected output: Array [2, 8, 18, 32]
