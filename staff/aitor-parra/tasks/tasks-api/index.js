@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const { name, version } = require('./package-json')
 
-const api = expres()
+const api = express()
 
 const jsonBodyParser = bodyParser.json()
 
