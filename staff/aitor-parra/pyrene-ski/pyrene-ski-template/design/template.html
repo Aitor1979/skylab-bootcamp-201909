@@ -7,19 +7,182 @@
     <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" href="images/ski_silouette.jpg" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Amaranth&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass&display=swap" rel="stylesheet">
 
     <title>Pyrene Ski App</title>
 </head>
 <body>
 
-    <section class="view landing">
-        <h1 class="landing__title">pyrene</h1>
-        <h2 class="landing__subtitle">SKI</h2>
-        <h3 class="landing__options">Please, proceed to <a href="#">LOGIN</a> or <a href="#">REGISTER</a>.</h3>
-
-
+    <section class="logo">
+        <image class="logo__image" src="/pyrene-ski-template/design/images/ski_silouette_white_shadow.png" alt="skier silouette">
     </section>
 
-    
+    <section class="view landing">
+        <h1 class="landing__title">pyrene</h1>
+        <!-- <h1 class="landing__title">PYRENE</h1> -->
+        <h2 class="landing__subtitle">SKI</h2>
+        <!-- <h2 class="landing__subtitle">ski</h2> -->
+    </section>
+
+    <section class="landing">
+        <h3 class="landing__options">Please, proceed to <a href="#">LOGIN</a> or <a href="#">REGISTER</a>.</h3>
+    </section>
+
+    <section class="register">
+            <h3 class="register__title">Register</h3>
+            <form class="register__form">
+                <input class="register__field" type="text" name="name" placeholder="name">
+                <input class="register__field" type="text" name="surname" placeholder="surname">
+                <input class="register__field" type="email" name="email" placeholder="email">
+                <input class="register__field" type="text" name="username" placeholder="username">
+                <input class="register__field" type="password" name="password" placeholder="password">
+                <button class="team__button">Submit</button>
+            </form>
+    </section>
+
+    <section class="login">
+            <h3 class="login__title">Login</h3>
+            <form class="login__form">
+                <input class="login__field" type="text" name="username" placeholder="username">
+                <input class="login__field" type="password" name="password" placeholder="password">
+                <button class="login__button">Submit</button>
+            </form>
+        </section>
+        
+        <section class="board calendar">
+            <h3 class="calendar__title">Calendar</h3>
+            <table class="calendar__table" >
+                    <caption class="calendar__date">Desember, 2019</caption>
+                    <tr class="calendar__day-names">
+                     <th>Mo</th>
+                     <th>Tu</th>
+                     <th>We</th>
+                     <th>Th</th>
+                     <th>Fr</th>
+                     <th>Sa</th>
+                     <th>Su</th>
+                    </tr>
+                    <tr class="calendar__week">
+                     <td>1</td>
+                     <td>2</td>
+                     <td>3</td>
+                     <td>4</td>
+                     <td>5</td>
+                     <td>6</td>
+                     <td>7</td>
+                    </tr>
+                    <tr class="calendar__week">
+                     <td>8</td>
+                     <td>9</td>
+                     <td>10</td>
+                     <td>11</td>
+                     <td>12</td>
+                     <td>13</td>
+                     <td>14</td>
+                    </tr>
+                    <tr class="calendar__week">
+                     <td>15</td>
+                     <td>16</td>
+                     <td>17</td>
+                     <td>18</td>
+                     <td>19</td>
+                     <td>20</td>
+                     <td>21</td>
+                    </tr>
+                    <tr class="calendar__week">
+                     <td>22</td>
+                     <td>23</td>
+                     <td>24</td>
+                     <td>25</td>
+                     <td>26</td>
+                     <td>27</td>
+                     <td>28</td>
+                    </tr>
+                    <tr class="calendar__week">
+                     <td>29</td>
+                     <td>30</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                    </tr>
+                   </table>
+    </section>
+
+    <section class="board team">
+        <h3 class="team__title">Team</h3>
+        <h2 class="team__create-remove"><a href="#">Create   </a>  /  <a href="#">   Remove</a></h2>
+        <!-- <h2 class="team__create-remove"><a href="#">Remove</a></h3> -->
+        <select class="team members">
+                <option class="members__button" value="select">Select team member</option>
+                <option class="members__button" value="rick">Rick</option>
+                <option class="members__button" value="morty">Morty</option>
+                <option class="members__button" value="jerry">Jerry</option>
+                <option class="members__button" value="beth">Beth</option>
+                <option class="members__button" value="summer">Summer</option>
+        </select>
+    </section>
+
+    <section class="team-create">
+        <h3 class="team-create__title">Create team member</h3>
+        <form class="team-create__form">
+            <input class="team-create__field" type="text" name="name" placeholder="name">
+            <input class="team-create__field" type="text" name="surname" placeholder="surname">
+            <input class="team-create__field" type="email" name="email" placeholder="email">
+            <input class="team-create__field" type="phone" name="phone" placeholder="phone">
+            <input class="team-create__field" type="text" name="sport" placeholder="sport">
+            <input class="team-create__field" type="text" name="availability" placeholder="availability">
+            <button class="team-create__button">Submit</button>
+        </form>
+        <h2 class="team-create__goback"><a href="#">Go Back</a></h2> 
+    </section>
+
+    <section class="team-remove">
+            <h3 class="team-remove__title">Remove team member</h3>
+            <select class="team-remove__members">
+                    <option class="members__button" value="select">Select team member</option>
+                    <option class="members__button" value="rick">Rick</option>
+                    <option class="members__button" value="morty">Morty</option>
+                    <option class="members__button" value="jerry">Jerry</option>
+                    <option class="members__button" value="beth">Beth</option>
+                    <option class="members__button" value="summer">Summer</option>
+            </select>
+            <h2 class="team-remove__goback"><a href="#">Go Back</a></h2> 
+        </section>
+
+    <section class="add-class">
+        <h3 class="add-class__title">Add class</h3>
+        <form class="add-class__form">
+            <input class="add-class__field" type="date" name="date" placeholder="">
+            <input class="add-class__field" type="time" name="time" placeholder="">
+            <button class="add-class__button">Submit</button>
+        </form>
+        <h2 class="add-class__goback"><a href="#">Go Back</a></h2>
+    </section>    
+
+    <section class="delete-class">
+        <h3 class="delete-class__title">Delete class</h3>
+        <form class="delete-class__form">
+            <input class="delete-class__field" type="date" name="date" placeholder="">
+            <input class="delete-class__field" type="time" name="time" placeholder="">
+            <button class="delete-class__button">Submit</button>
+        </form>
+        <h2 class="delete-class__goback"><a href="#">Go Back</a></h2>
+    </section>
+        
+    <section class="class-bookings">
+        <h3 class="class-bookings__title">Class bookings</h3>
+        <ul class="class-bookings__team-member">
+            <li class="class-bookings__team-booking">15/10/2019, 09:00</li>
+            <li class="class-bookings__team-booking">15/10/2019, 11:00</li>
+            <li class="class-bookings__team-booking">22/10/2019, 9:00</li>
+        </ul>
+
+    </section>
+        
+
+
 </body>
 </html>
