@@ -42,73 +42,23 @@
     </section>
 
     <section class="login">
-            <h3 class="login__title">Login</h3>
-            <form class="login__form">
-                <input class="login__field" type="text" name="username" placeholder="username">
-                <input class="login__field" type="password" name="password" placeholder="password">
-                <button class="login__button">Submit</button>
-            </form>
-        </section>
-        
-        <section class="board calendar">
-            <h3 class="calendar__title">Calendar</h3>
-            <table class="calendar__table" >
-                    <caption class="calendar__date">Desember, 2019</caption>
-                    <tr class="calendar__day-names">
-                     <th>Mo</th>
-                     <th>Tu</th>
-                     <th>We</th>
-                     <th>Th</th>
-                     <th>Fr</th>
-                     <th>Sa</th>
-                     <th>Su</th>
-                    </tr>
-                    <tr class="calendar__week">
-                     <td>1</td>
-                     <td>2</td>
-                     <td>3</td>
-                     <td>4</td>
-                     <td>5</td>
-                     <td>6</td>
-                     <td>7</td>
-                    </tr>
-                    <tr class="calendar__week">
-                     <td>8</td>
-                     <td>9</td>
-                     <td>10</td>
-                     <td>11</td>
-                     <td>12</td>
-                     <td>13</td>
-                     <td>14</td>
-                    </tr>
-                    <tr class="calendar__week">
-                     <td>15</td>
-                     <td>16</td>
-                     <td>17</td>
-                     <td>18</td>
-                     <td>19</td>
-                     <td>20</td>
-                     <td>21</td>
-                    </tr>
-                    <tr class="calendar__week">
-                     <td>22</td>
-                     <td>23</td>
-                     <td>24</td>
-                     <td>25</td>
-                     <td>26</td>
-                     <td>27</td>
-                     <td>28</td>
-                    </tr>
-                    <tr class="calendar__week">
-                     <td>29</td>
-                     <td>30</td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                     <td></td>
-                    </tr>
-                   </table>
+        <h3 class="login__title">Login</h3>
+        <form class="login__form">
+            <input class="login__field" type="text" name="username" placeholder="username">
+            <input class="login__field" type="password" name="password" placeholder="password">
+            <button class="login__button">Submit</button>
+        </form>
+    </section>
+
+    <section class="lesson-list">
+            <h3 class="lesson-list__title">Lessons list</h3>
+            <h2 class="lesson-list__team-member">Morty</h2>
+            <ul class="lesson-list__team-list">
+                <li class="lesson-list__team-list-item">15/10/2019, 09:00</li>
+                <li class="lesson-list__team-list-item">15/10/2019, 11:00</li>
+                <li class="lesson-list__team-list-item">22/10/2019, 09:00</li>
+            </ul>
+    
     </section>
 
     <section class="board team">
@@ -152,37 +102,86 @@
             <h2 class="team-remove__goback"><a href="#">Go Back</a></h2> 
         </section>
 
-    <section class="add-class">
-        <h3 class="add-class__title">Add class</h3>
-        <form class="add-class__form">
-            <input class="add-class__field" type="date" name="date" placeholder="">
-            <input class="add-class__field" type="time" name="time" placeholder="">
-            <button class="add-class__button">Submit</button>
+    <section class="add-lesson">
+        <h3 class="add-lesson__title">Add class</h3>
+        <form class="add-lesson__form">
+            <input class="add-lesson__field" type="date" name="date" placeholder="">
+            <input class="add-lesson__field" type="time" name="time" placeholder="">
+            <button class="add-lesson__button">Submit</button>
         </form>
-        <h2 class="add-class__goback"><a href="#">Go Back</a></h2>
+        <h2 class="add-lesson__goback"><a href="#">Go Back</a></h2>
     </section>    
 
-    <section class="delete-class">
-        <h3 class="delete-class__title">Delete class</h3>
-        <form class="delete-class__form">
-            <input class="delete-class__field" type="date" name="date" placeholder="">
-            <input class="delete-class__field" type="time" name="time" placeholder="">
-            <button class="delete-class__button">Submit</button>
+    <section class="delete-lesson">
+        <h3 class="delete-lesson__title">Delete class</h3>
+        <form class="delete-lesson__form">
+            <input class="delete-lesson__field" type="date" name="date" placeholder="">
+            <input class="delete-lesson__field" type="time" name="time" placeholder="">
+            <button class="delete-lesson__button">Submit</button>
         </form>
-        <h2 class="delete-class__goback"><a href="#">Go Back</a></h2>
+        <h2 class="delete-lesson__goback"><a href="#">Go Back</a></h2>
     </section>
         
-    <section class="class-bookings">
-        <h3 class="class-bookings__title">Class bookings</h3>
-        <ul class="class-bookings__team-member">
-            <li class="class-bookings__team-booking">15/10/2019, 09:00</li>
-            <li class="class-bookings__team-booking">15/10/2019, 11:00</li>
-            <li class="class-bookings__team-booking">22/10/2019, 9:00</li>
-        </ul>
-
-    </section>
-        
-
-
 </body>
 </html>
+
+<!--     <section class="board calendar">
+        <h3 class="calendar__title">Calendar</h3>
+        <table class="calendar__table" >
+            <caption class="calendar__date">Desember, 2019</caption>
+            <tr class="calendar__day-names">
+                <th>Mo</th>
+                <th>Tu</th>
+                <th>We</th>
+                <th>Th</th>
+                <th>Fr</th>
+                <th>Sa</th>
+                <th>Su</th>
+            </tr>
+            <tr class="calendar__week">
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+            <tr class="calendar__week">
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+            </tr>
+            <tr class="calendar__week">
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+            </tr>
+            <tr class="calendar__week">
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+            </tr>
+            <tr class="calendar__week">
+                <td>29</td>
+                <td>30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </section> -->
